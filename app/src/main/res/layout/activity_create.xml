@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5">
+
+        <!-- Toolbar con Botón de Volver -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Producto"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:padding="16dp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Contenido de la Actividad -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Campo para el SKU del Producto -->
+                <EditText
+                    android:id="@+id/et_sku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SKU del Producto"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campo para el Nombre del Producto -->
+                <EditText
+                    android:id="@+id/et_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del Producto"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campo para la Marca del Producto -->
+                <EditText
+                    android:id="@+id/et_marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Marca del Producto"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campo para el Precio del Producto -->
+                <EditText
+                    android:id="@+id/et_precio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Precio del Producto"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campo para el Stock del Producto -->
+                <EditText
+                    android:id="@+id/et_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cantidad en Stock"
+                    android:inputType="number"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Campo para la Descripción del Producto -->
+                <EditText
+                    android:id="@+id/et_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción del Producto"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Botón para Guardar el Producto -->
+                <Button
+                    android:id="@+id/btn_guardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar Producto"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
